@@ -1,17 +1,18 @@
 
 import ComputeArray.ComputeArray;
+import ListEqual.ListEqual;
+import ListSearchIndex.ListSearchIndex;
 import Palindrome.Palindrome;
+import ParseDate.ParseDate;
 import Strings.*;
+
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(Palindrome.isPalindrome("ressasser"));
-        System.out.println(Palindrome.isPalindrome("Bonjour"));
-            int[] array = ComputeArray.computeArray(new int[]{9, 13, 8, 23, 1, 0, 89});
-            for (int i : array) {
-                System.out.print(i + " ");
-            }
-
+        System.out.println(ParseDate.parseIsoFormat("2022-04-25T20:51:28.709039322"));
+        System.out.println(ParseDate.parseFullTextFormat("lundi 25 avril 2022"));
+        System.out.println(ParseDate.parseTimeFormat("09 heures du soir, 07 minutes et 23 secondes"));
     }
 
 }
