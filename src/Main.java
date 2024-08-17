@@ -1,18 +1,20 @@
 
-import ComputeArray.ComputeArray;
-import ListEqual.ListEqual;
-import ListSearchIndex.ListSearchIndex;
-import Palindrome.Palindrome;
-import ParseDate.ParseDate;
-import Strings.*;
+import CelestialObject.CelestialObject;
 
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(ParseDate.parseIsoFormat("2022-04-25T20:51:28.709039322"));
-        System.out.println(ParseDate.parseFullTextFormat("lundi 25 avril 2022"));
-        System.out.println(ParseDate.parseTimeFormat("09 heures du soir, 07 minutes et 23 secondes"));
+        CelestialObject celestialObject = new CelestialObject();
+        CelestialObject earth = new CelestialObject("Terre", 1.0, 2.0, 2.0);
+        CelestialObject earth1 = new CelestialObject("Terre", 1.0, 2.0, 2.0);
+
+        System.out.println(celestialObject.toString());
+        System.out.println(earth.equals(earth1));
+        System.out.println(earth.equals(celestialObject));
+
+        System.out.println(earth.hashCode());
+        System.out.println(celestialObject.hashCode());
+
     }
 
 }
